@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VLSM Calculator</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>VLSM Calculator</h1>
+            <p>Calculate subnets using Variable Length Subnet Masking</p>
+        </header>
+
+        <main class="main-content">
+            <form id="vlsmForm" class="vlsm-form">
+                <div class="input-group">
+                    <label for="baseIpInput">Base IP Address</label>
+                    <input type="text" id="baseIpInput" placeholder="Enter Base Ip Address" required>
+                </div>
+                <div class="input-group">
+                    <label for="hostRequirements">Host Requirements</label>
+                    <input type="text" id="hostRequirements" placeholder="Enter Host Separated by Comma" required>
+                </div>
+                <button type="submit" class="calculate-btn">Calculate Subnets</button>
+            </form>
+
+            <div id="results" class="results hidden">
+                <h2>Subnet Results</h2>
+                <div id="subnetList"></div>
+                <div id="error" class="error hidden"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
